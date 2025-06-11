@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./../styles/App.css";
 
 const App = () => {
-  const [level, setLevel] = useState(null); // easy, normal, hard
+  const [level, setLevel] = useState(null);
   const [tiles, setTiles] = useState([]);
   const [flipped, setFlipped] = useState([]);
   const [matched, setMatched] = useState([]);
@@ -47,10 +47,12 @@ const App = () => {
   return (
     <div>
       {/* Do not remove the main div */}
+      <h1>Welcome!</h1>
+
       <div className="levels_container">
-        <label><input type="radio" id="easy" name="difficulty" onChange={() => setLevel("easy")} /> Easy</label>
-        <label><input type="radio" id="normal" name="difficulty" onChange={() => setLevel("normal")} /> Normal</label>
-        <label><input type="radio" id="hard" name="difficulty" onChange={() => setLevel("hard")} /> Hard</label>
+        <button id="easy" onClick={() => setLevel("easy")}>Easy</button>
+        <button id="normal" onClick={() => setLevel("normal")}>Normal</button>
+        <button id="hard" onClick={() => setLevel("hard")}>Hard</button>
       </div>
 
       <div className="cells_container">
