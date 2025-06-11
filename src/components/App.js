@@ -50,9 +50,35 @@ const App = () => {
       <h1>Welcome!</h1>
 
       <div className="levels_container">
-        <button id="easy" onClick={() => setLevel("easy")}>Easy</button>
-        <button id="normal" onClick={() => setLevel("normal")}>Normal</button>
-        <button id="hard" onClick={() => setLevel("hard")}>Hard</button>
+        <label htmlFor="easy">
+          <input
+            type="radio"
+            id="easy"
+            name="difficulty"
+            onChange={() => setLevel("easy")}
+          />
+          Easy
+        </label>
+
+        <label htmlFor="normal">
+          <input
+            type="radio"
+            id="normal"
+            name="difficulty"
+            onChange={() => setLevel("normal")}
+          />
+          Normal
+        </label>
+
+        <label htmlFor="hard">
+          <input
+            type="radio"
+            id="hard"
+            name="difficulty"
+            onChange={() => setLevel("hard")}
+          />
+          Hard
+        </label>
       </div>
 
       <div className="cells_container">
