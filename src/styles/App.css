@@ -1,51 +1,158 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.95);
+  background-color: #00B9B3;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.levels_container {
-  margin: 20px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.levels_container button {
-  margin:  10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
+.levels_container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.7rem;
 }
 
-.cells_container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  gap: 10px;
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 10px;
+.radio-input{
+    width: 1.5rem;
+    cursor: pointer;
 }
 
-.tile {
-  width: 60px;
-  height: 60px;
-  background-color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  cursor: pointer;
-  border-radius: 8px;
-  user-select: none;
-  transition: background-color 0.3s ease;
+.radioBtns{
+    display: flex;
+    gap: 2rem;
 }
 
-.tile.flipped {
-  background-color: #4caf50;
-  color: white;
+.radiobtn{
+    display: flex;
+    gap: 5px;
 }
 
-.message {
-  font-size: 18px;
-  margin-top: 20px;
-  color: #2e7d32;
+#startGameBtn{
+    width: 9rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0D3311;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Easy Mode Page */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newGameBtn, .resetGameBtn{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: yellowgreen;
+    cursor: pointer;
+    color: rgb(0, 0, 0, 0.95);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.easy-mode-page{
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.header-h1{
+    font-size: 2rem;
+    width: 53%;
+    margin: auto;
+}
+
+.game-result{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header-tries{
+    font-size: 1.5rem;
+    width: 53%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+#easy-board{
+    display: grid;
+    grid-template-columns: repeat(4, 7rem);
+    grid-template-rows: repeat(2, 7rem);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cells{
+    background-color: #0D3311;
+    cursor: pointer;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+} 
+
+/* Hard Mode Page */
+
+.hard-mode-page{
+    width: 70%;
+    height: 145vh;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#hard-board{
+    display: grid;
+    grid-template-columns: repeat(4, 7rem);
+    grid-template-rows: repeat(6, 7rem);
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Normal Mode Page */
+
+.normal-mode-page{
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#normal-board{
+    display: grid;
+    grid-template-columns: repeat(4, 7rem);
+    grid-template-rows: repeat(4, 7rem);
+    justify-content: center;
+    gap: 1rem;
 }
